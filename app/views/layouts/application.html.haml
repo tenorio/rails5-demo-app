@@ -1,0 +1,19 @@
+!!!
+%html{ :lang => 'pt-BR' }
+  %head
+    %meta{ :charset => 'utf-8' }
+    %title Rails5demo
+    %meta{ :name => 'viewport', :content => 'width=device-width, initial-scale=1' }
+    %meta{ :name => 'description', :content => 'A Rails 5 demo app :)' }
+    %meta{ :author => 'Marcelo' }
+    = csrf_meta_tags
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+
+  %body
+    -#%header{ :class => 'w3-container' }
+    -#  = yield(:header)
+    %div{ :class => 'w3-container' }
+      = yield
+    %footer{ :class => 'w3-container' }
+      %p= "#{current_year} - Rails 5 demo app"
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
