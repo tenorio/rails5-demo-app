@@ -66,3 +66,6 @@ gem 'hirb'
 
 # Dry HTML with HAML
 gem 'haml', '~> 4.1.0.beta.1'
+
+# I18n
+gem 'rails-i18n', '~> 5.0.0'
