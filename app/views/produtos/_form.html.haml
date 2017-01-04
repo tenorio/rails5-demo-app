@@ -1,0 +1,23 @@
+= form_for(produto) do |f|
+  - if produto.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(produto.errors.count, "error")
+        prohibited this produto from being saved:
+      %ul
+        - produto.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = f.label :nome
+    = f.text_field :nome
+  .field
+    = f.label :descricao
+    = f.text_area :descricao
+  .field
+    = f.label :valor
+    = f.number_field :valor, min: 1
+  .field
+    = f.label :estoque
+    = f.number_field :estoque, min: 1
+  .actions
+    = f.submit

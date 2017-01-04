@@ -1,41 +1,41 @@
 require 'test_helper'
 
 class ClienteTest < ActiveSupport::TestCase
-  test 'should not save cliente without name or middle name' do
-    c = Cliente.new
-
-    assert_not c.save, 'Saved the cliente without name or middle name'
+  def new_empty_client
+    Cliente.new
   end
 
-  test 'should not save cliente without name' do
-    c = Cliente.new
+  test 'blank Cliente must be invalid' do
+    @cli = new_empty_client
 
-    c.sobrenome = 'Smith'
-
-    assert_not c.save, 'Saved the cliente without name'
+    assert @cli.invalid?
+    assert @cli.errors[:nome].any?
+    assert @cli.errors[:sobrenome].any?
   end
 
-  test 'should not save cliente with name containing less than three characters' do
-    c = Cliente.new
+  test 'nome must have more than two characters' do
+    @cli = new_empty_client
 
-    c.nome = 'DJ'
+    @cli.nome = 'DJ'
+    assert @cli.invalid?
+    assert @cli.errors[:nome].any?
 
-    assert_not c.save, 'Saved the cliente with name containing only two characters'
+    @cli.nome = 'Joe'
+    @cli.sobrenome = 'Max'
+
+    assert @cli.valid?
   end
 
-  test 'should not save cliente without middle name' do
-    c = Cliente.new
+  test 'sobrenome must have more than two characters' do
+    @cli = new_empty_client
 
-    c.nome = 'Andrew'
+    @cli.sobrenome = 'DJ'
+    assert @cli.invalid?
+    assert @cli.errors[:sobrenome].any?
 
-    assert_not c.save, 'Saved the cliente without middle name'
-  end
+    @cli.nome = 'Joe'
+    @cli.sobrenome = 'Max'
 
-  test 'should not save cliente with middle name containing less than three characters' do
-    c = Cliente.new
-
-    c.sobrenome = 'DJ'
-
-    assert_not c.save, 'Saved the cliente with middle name containing only two characters'
+    assert @cli.valid?
   end
 end
