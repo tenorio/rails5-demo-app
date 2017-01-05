@@ -1,0 +1,15 @@
+---
+en:
+  activerecord:
+    models:
+      produto:
+        one: 'product'
+        other: 'products'
+    attributes:
+      produto:
+        editar: 'edit product'
+        novo: 'new product'
+        nome: 'name'
+        descricao: 'description'
+        valor: 'price'
+        estoque: 'stock'

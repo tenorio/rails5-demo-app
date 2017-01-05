@@ -12,17 +12,14 @@ module Rails5demo
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
+    config.encoding = 'utf-8'
+    config.time_zone = 'Brasilia'
+
     # Pretty console output with Hirb
     console do
       require 'hirb'
 
       Hirb.enable
     end
-
-    # I18n
-    config.time_zone = 'Brasilia'
-    config.i18n.available_locales = [:en, :'pt-BR']
-    config.i18n.default_locale = :'pt-BR'
-    config.encoding = 'utf-8'
   end
 end

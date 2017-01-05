@@ -1,9 +1,7 @@
 = form_for(produto) do |f|
   - if produto.errors.any?
     #error_explanation
-      %h2
-        = pluralize(produto.errors.count, "error")
-        prohibited this produto from being saved:
+      %h2= t('record_invalid', scope: [:activerecord, :errors, :messages], errors: nil)
       %ul
         - produto.errors.full_messages.each do |message|
           %li= message

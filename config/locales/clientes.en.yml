@@ -23,8 +23,11 @@ en:
   activerecord:
     models:
       cliente:
-        one: 'Client'
-        other: 'Clients'
-        new: 'New client'
-        nome: 'Name'
-        sobrenome: 'Middle name'
+        one: 'client'
+        other: 'clients'
+    attributes:
+      cliente:
+        editar: 'edit client'
+        novo: 'new client'
+        nome: 'name'
+        sobrenome: 'middle name'

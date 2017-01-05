@@ -1,17 +1,17 @@
 %p#notice= notice
 %p
-  %strong Nome:
+  %strong= t('nome', scope: [:activerecord, :attributes, :produto])
   = @produto.nome
 %p
-  %strong Descrição:
+  %strong= t('descricao', scope: [:activerecord, :attributes, :produto])
   = @produto.descricao
 %p
-  %strong Valor:
+  %strong= t('valor', scope: [:activerecord, :attributes, :produto])
   = @produto.valor
 %p
-  %strong Estoque:
+  %strong= t('estoque', scope: [:activerecord, :attributes, :produto])
   = @produto.estoque
 
-= link_to 'Edit', edit_produto_path(@produto)
+= link_to t('editar'), edit_produto_path(@produto)
 |
-= link_to 'Back', produtos_path
+= link_to t('voltar'), produtos_path

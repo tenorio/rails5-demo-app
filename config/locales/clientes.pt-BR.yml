@@ -3,8 +3,11 @@ pt-BR:
   activerecord:
     models:
       cliente:
-        one: 'Cliente'
-        other: 'Clientes'
-        new: 'Novo cliente'
-        nome: 'Nome'
-        sobrenome: 'Sobrenome'
+        one: 'cliente'
+        other: 'clientes'
+    attributes:
+      cliente:
+        editar: 'editar cliente'
+        novo: 'novo cliente'
+        nome: 'nome'
+        sobrenome: 'sobrenome'

@@ -1,6 +1,7 @@
 ---
 en:
-  confirm: 'This item will be deleted'
-  destroy: 'Destroy'
-  edit: 'Edit'
-  show: 'Show'
+  confirmar: 'This item will be deleted'
+  excluir: 'Destroy'
+  editar: 'Edit'
+  exibir: 'Show'
+  voltar: 'Back'

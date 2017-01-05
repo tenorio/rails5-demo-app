@@ -1,10 +1,10 @@
 %p#notice= notice
 %p
-  %strong Nome:
+  %strong= t('nome', scope: [:activerecord, :attributes, :cliente])
   = @cliente.nome
 %p
-  %strong Sobrenome:
+  %strong= t('sobrenome', scope: [:activerecord, :attributes, :cliente])
   = @cliente.sobrenome
-= link_to 'Edit', edit_cliente_path(@cliente)
+= link_to t('editar'), edit_cliente_path(@cliente)
 |
-= link_to 'Back', clientes_path
+= link_to t('voltar'), clientes_path
