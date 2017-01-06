@@ -1,0 +1,13 @@
+---
+pt-BR:
+  activerecord:
+    models:
+      produto_tipo:
+        one: 'tipo de produto'
+        other: 'tipos de produtos'
+    attributes:
+      produto_tipo:
+        editar: 'editar tipo de produto'
+        novo: 'novo tipo de produto'
+        nome: 'nome'
+        descricao: 'descrição'

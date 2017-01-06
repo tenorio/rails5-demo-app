@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  nome: MyString
-  descricao: MyText
-  valor: 9.99
-  estoque: 
+  nome: Cristal de dilítio
+  descricao: Cristal de dilítio para motor hyperdrive
+  valor: 9999.99
+  estoque: 10
 
 two:
-  nome: MyString
-  descricao: MyText
-  valor: 9.99
-  estoque: 
+  nome: Unidade anti-gravidade 50
+  descricao: Unidade anti-gravidade para naves de até 50m2
+  valor: 6750
+  estoque: 76

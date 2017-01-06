@@ -1,0 +1,10 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: Jedi Items
+  descricao: Jedi items taken from all the galaxy
+
+two:
+  nome: Sith items
+  descricao: Sith items taken from all the galaxy
+
