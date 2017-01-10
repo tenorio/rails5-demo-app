@@ -1,5 +1,6 @@
 class ProdutosController < ApplicationController
   before_action :set_produto, only: [:show, :edit, :update, :destroy]
+  before_action :get_tipos, only: [:new, :edit, :create]
 
   # GET /produtos
   # GET /produtos.json
@@ -69,6 +70,10 @@ class ProdutosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def produto_params
-      params.require(:produto).permit(:nome, :descricao, :valor, :estoque)
+      params.require(:produto).permit(:nome, :descricao, :valor, :estoque, :tipo_id)
+    end
+
+    def get_tipos
+      @tipos = Tipo.all.order(:nome)
     end
 end

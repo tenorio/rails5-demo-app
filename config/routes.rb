@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :clientes, :produtos, :produto_tipos
+  resources :clientes, :produtos, :tipos
 
   get 'welcome/index'
   post 'welcome/index'

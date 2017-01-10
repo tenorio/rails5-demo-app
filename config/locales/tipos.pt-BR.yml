@@ -1,0 +1,13 @@
+---
+pt-BR:
+  activerecord:
+    models:
+      tipo:
+        one: 'tipo'
+        other: 'tipos'
+    attributes:
+      tipo:
+        editar: 'editar tipo'
+        novo: 'novo tipo'
+        nome: 'nome'
+        descricao: 'descrição'

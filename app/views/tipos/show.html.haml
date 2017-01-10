@@ -1,0 +1,11 @@
+%p#notice= notice
+%p
+  %strong= t('nome', scope: [:activerecord, :attributes, :tipo])
+  = @tipo.nome
+%p
+  %strong= t('descricao', scope: [:activerecord, :attributes, :tipo])
+  = @tipo.descricao
+
+= link_to t('editar'), edit_tipo_path(@tipo)
+|
+= link_to t('voltar'), tipos_path

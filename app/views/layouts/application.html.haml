@@ -19,6 +19,6 @@
           options_for_select(LANGUAGES, I18n.locale.to_s),
           onchange: 'this.form.submit()'
       = yield
-    %footer{ :class => 'w3-container' }
-      %p= "#{current_year} - Rails 5 demo app"
+    -#%footer{ :class => 'w3-container' }
+    -#  %p= "#{current_year} - Rails 5 demo app"
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'

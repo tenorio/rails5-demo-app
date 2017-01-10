@@ -1,0 +1,5 @@
+%h1= t('editar', scope: [:activerecord, :attributes, :tipo])
+= render 'form', tipo: @tipo
+= link_to t('exibir'), @tipo
+|
+= link_to t('voltar'), tipos_path

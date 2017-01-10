@@ -1,0 +1,19 @@
+%p#notice= notice
+%h1= t('other', scope: [:activerecord, :models, :tipo])
+%table
+  %thead
+    %tr
+      %th= t('nome', scope: [:activerecord, :attributes, :tipo])
+      %th= t('descricao', scope: [:activerecord, :attributes, :tipo])
+      %th{:colspan => "3"}
+  %tbody
+    - @tipos.each do |t|
+      %tr
+        %td= t.nome
+        %td= truncate(t.descricao)
+        %td= link_to t('exibir'), t
+        %td= link_to t('editar'), edit_tipo_path(t)
+        %td= link_to t('excluir'), t, method: :delete, data: { confirm: t('confirmar') }
+%br/
+= link_to t('novo', scope: [:activerecord, :attributes, :tipo]), new_tipo_path
+= link_to t('voltar'), root_path

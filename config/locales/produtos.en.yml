@@ -13,3 +13,4 @@ en:
         descricao: 'description'
         valor: 'price'
         estoque: 'stock'
+        tipo: 'type'
