@@ -2,7 +2,19 @@ require 'test_helper'
 
 class ClientesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @cliente = clientes(:one)
+    @cliente = clientes(:einstein)
+
+    @cliente_params_create = { nome: @cliente.nome, sobrenome: @cliente.sobrenome, endereco: @cliente.endereco,
+                               sexo: @cliente.sexo, email: @cliente.email, uf: @cliente.uf, cidade: @cliente.cidade,
+                               pais: @cliente.pais, cep: @cliente.cep, data_nascimento: @cliente.data_nascimento,
+                               newsletter: @cliente.newsletter }
+
+    @cliente = clientes(:bill)
+
+    @cliente_params_update = { nome: @cliente.nome, sobrenome: @cliente.sobrenome, endereco: @cliente.endereco,
+                               sexo: @cliente.sexo, email: @cliente.email, uf: @cliente.uf, cidade: @cliente.cidade,
+                               pais: @cliente.pais, cep: @cliente.cep, data_nascimento: @cliente.data_nascimento,
+                               newsletter: @cliente.newsletter }
   end
 
   test "should get index" do
@@ -17,7 +29,7 @@ class ClientesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create cliente" do
     assert_difference('Cliente.count') do
-      post clientes_url, params: { cliente: { nome: @cliente.nome, sobrenome: @cliente.sobrenome } }
+      post clientes_url, params: { cliente: @cliente_params_create }
     end
 
     assert_redirected_to cliente_url(Cliente.last)
@@ -34,7 +46,7 @@ class ClientesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update cliente" do
-    patch cliente_url(@cliente), params: { cliente: { nome: @cliente.nome, sobrenome: @cliente.sobrenome } }
+    patch cliente_url(@cliente), params: { cliente: @cliente_params_update }
     assert_redirected_to cliente_url(@cliente)
   end
 

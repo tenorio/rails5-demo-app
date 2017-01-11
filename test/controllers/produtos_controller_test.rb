@@ -4,11 +4,11 @@ class ProdutosControllerTest < ActionDispatch::IntegrationTest
   setup do
     @produto = produtos(:one)
     @produto_params_create = { nome: @produto.nome, descricao: @produto.descricao, valor: @produto.valor,
-                               estoque: @produto.estoque }
+                               estoque: @produto.estoque, tipo_id: tipos(:pecas).id }
 
     @produto2 = produtos(:two)
     @produto_params_update = { nome: @produto2.nome, descricao: @produto2.descricao, valor: @produto2.valor,
-                                estoque: @produto2.estoque }
+                                estoque: @produto2.estoque, tipo_id: tipos(:alimentos).id }
   end
 
   test "should get index" do

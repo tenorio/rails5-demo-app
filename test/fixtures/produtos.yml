@@ -5,9 +5,11 @@ one:
   descricao: Cristal de dilítio para motor hyperdrive
   valor: 9999.99
   estoque: 10
+  tipo: pecas
 
 two:
   nome: Unidade anti-gravidade 50
   descricao: Unidade anti-gravidade para naves de até 50m2
   valor: 6750
   estoque: 76
+  tipo: pecas

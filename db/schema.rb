@@ -10,13 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170110172129) do
+ActiveRecord::Schema.define(version: 20170111124209) do
 
   create_table "clientes", force: :cascade do |t|
     t.string   "nome"
     t.string   "sobrenome"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.string   "endereco"
+    t.string   "sexo",            limit: 1
+    t.string   "email"
+    t.string   "uf",              limit: 2
+    t.string   "cidade"
+    t.string   "pais"
+    t.string   "cep",             limit: 8
+    t.date     "data_nascimento"
+    t.boolean  "newsletter"
   end
 
   create_table "produto_tipos", force: :cascade do |t|

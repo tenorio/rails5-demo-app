@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  nome: MyString
-  descricao: MyString
+pecas:
+  nome: Peças para espaçonaves
+  descricao: Peças para espaçonaves de toda a galáxia
 
-two:
-  nome: MyString
-  descricao: MyString
+alimentos:
+  nome: Alimentação
+  descricao: Alimentação para longas viagens espaciais

@@ -8,6 +8,6 @@ en:
     attributes:
       tipo:
         editar: 'edit type'
-        novo: 'new type'
+        novo: 'new type (category)'
         nome: 'name'
         descricao: 'description'

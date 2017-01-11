@@ -3,5 +3,5 @@ class Produto < ApplicationRecord
   accepts_nested_attributes_for :tipo
   validates_presence_of :nome, :descricao
   validates_numericality_of :valor, :greater_than => 0
-  validates_numericality_of :estoque, :greater_than => 0
+  validates_numericality_of :estoque, {:greater_than => 0, only_integer: true}
 end

@@ -2,7 +2,11 @@ require 'test_helper'
 
 class TiposControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @tipo = tipos(:one)
+    @tipo = tipos(:alimentos)
+    @tipo_params_create = { nome: @tipo.nome, descricao: @tipo.descricao }
+
+    @tipo = tipos(:pecas)
+    @tipo_params_update = { nome: @tipo.nome, descricao: @tipo.descricao }
   end
 
   test "should get index" do
@@ -17,7 +21,7 @@ class TiposControllerTest < ActionDispatch::IntegrationTest
 
   test "should create tipo" do
     assert_difference('Tipo.count') do
-      post tipos_url, params: { tipo: {  } }
+      post tipos_url, params: { tipo: @tipo_params_create }
     end
 
     assert_redirected_to tipo_url(Tipo.last)
@@ -34,7 +38,7 @@ class TiposControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update tipo" do
-    patch tipo_url(@tipo), params: { tipo: {  } }
+    patch tipo_url(@tipo), params: { tipo: @tipo_params_update }
     assert_redirected_to tipo_url(@tipo)
   end
 

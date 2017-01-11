@@ -8,6 +8,6 @@ pt-BR:
     attributes:
       tipo:
         editar: 'editar tipo'
-        novo: 'novo tipo'
+        novo: 'novo tipo (categoria)'
         nome: 'nome'
         descricao: 'descrição'

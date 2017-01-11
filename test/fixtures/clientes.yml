@@ -1,9 +1,27 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  nome: MyString
-  sobrenome: MyString
+einstein:
+  nome: Albert
+  sobrenome: Einstein
+  endereco: Rua dos Físicos, 10
+  sexo: M
+  email: me@einstein.com
+  uf: sp
+  cidade: São Paulo
+  pais: Brasil
+  cep: 05559789
+  data_nascimento: 1910-01-01
+  newsletter: 1
 
-two:
-  nome: MyString
-  sobrenome: MyString
+bill:
+  nome: Bill
+  sobrenome: Gates
+  endereco: Rua dos Programadores, 10
+  sexo: M
+  email: me@tiobill.com
+  uf: sp
+  cidade: São Paulo
+  pais: Brasil
+  cep: 05559789
+  data_nascimento: 1940-01-01
+  newsletter: 0
