@@ -15,6 +15,9 @@ module Rails5demo
     config.encoding = 'utf-8'
     config.time_zone = 'Brasilia'
 
+    # Tell Rails to look for I18n files inside all config/locales directory.
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+
     # Pretty console output with Hirb
     console do
       require 'hirb'

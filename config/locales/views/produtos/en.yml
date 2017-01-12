@@ -5,6 +5,7 @@ en:
       produto:
         one: 'product'
         other: 'products'
+        extenso: 'List of products'
     attributes:
       produto:
         editar: 'edit product'

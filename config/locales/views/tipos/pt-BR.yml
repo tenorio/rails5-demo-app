@@ -5,6 +5,7 @@ pt-BR:
       tipo:
         one: 'tipo'
         other: 'tipos'
+        extenso: 'Tipos de produtos (categorias)'
     attributes:
       tipo:
         editar: 'editar tipo'

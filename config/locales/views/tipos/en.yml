@@ -5,6 +5,7 @@ en:
       tipo:
         one: 'type'
         other: 'types'
+        extenso: 'Product types (categories)'
     attributes:
       tipo:
         editar: 'edit type'

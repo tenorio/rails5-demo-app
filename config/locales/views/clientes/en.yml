@@ -25,9 +25,19 @@ en:
       cliente:
         one: 'client'
         other: 'clients'
+        extenso: 'List of clients'
     attributes:
       cliente:
         editar: 'edit client'
         novo: 'new client'
         nome: 'name'
         sobrenome: 'middle name'
+        endereco: 'address'
+        sexo: 'sex'
+        email: 'e-mail'
+        uf: 'state'
+        cidade: 'city'
+        pais: 'country'
+        cep: 'zip code'
+        data_nascimento: 'birth date'
+        newsletter: 'get our newsletter'

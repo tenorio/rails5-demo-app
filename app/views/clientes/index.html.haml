@@ -5,12 +5,18 @@
     %tr
       %th= t('nome', scope: [:activerecord, :attributes, :cliente])
       %th= t('sobrenome', scope: [:activerecord, :attributes, :cliente])
+      %th= t('cidade', scope: [:activerecord, :attributes, :cliente])
+      %th= t('uf', scope: [:activerecord, :attributes, :cliente])
+      %th= t('email', scope: [:activerecord, :attributes, :cliente])
       %th{:colspan => "3"}
   %tbody
     - @clientes.each do |cliente|
       %tr
         %td= cliente.nome
         %td= cliente.sobrenome
+        %td= cliente.cidade
+        %td= cliente.uf
+        %td= cliente.email
         %td= link_to t('exibir'), cliente
         %td= link_to t('editar'), edit_cliente_path(cliente)
         %td= link_to t('excluir'), cliente, method: :delete, data: { confirm: t('confirmar') }

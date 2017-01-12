@@ -1,0 +1,23 @@
+---
+pt-BR:
+  activerecord:
+    models:
+      cliente:
+        one: 'cliente'
+        other: 'clientes'
+        extenso: 'Lista de clientes'
+    attributes:
+      cliente:
+        editar: 'editar cliente'
+        novo: 'novo cliente'
+        nome: 'nome'
+        sobrenome: 'sobrenome'
+        endereco: 'endereço'
+        sexo: 'sexo'
+        email: 'e-mail'
+        uf: 'estado'
+        cidade: 'cidade'
+        pais: 'país'
+        cep: 'cep'
+        data_nascimento: 'data de nascimento'
+        newsletter: 'receber newsletter'

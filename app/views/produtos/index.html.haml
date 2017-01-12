@@ -4,6 +4,7 @@
   %thead
     %tr
       %th= t('nome', scope: [:activerecord, :attributes, :produto])
+      %th= t('one', scope: [:activerecord, :models, :tipo])
       %th= t('descricao', scope: [:activerecord, :attributes, :produto])
       %th= t('valor', scope: [:activerecord, :attributes, :produto])
       %th= t('estoque', scope: [:activerecord, :attributes, :produto])
@@ -12,8 +13,9 @@
     - @produtos.each do |produto|
       %tr
         %td= produto.nome
+        %td= produto.tipo.nome
         %td= truncate(produto.descricao)
-        %td= produto.valor
+        %td{:style => 'text-align: right'}= number_to_currency produto.valor
         %td= produto.estoque
         %td= link_to t('exibir'), produto
         %td= link_to t('editar'), edit_produto_path(produto)

@@ -5,6 +5,7 @@ pt-BR:
       produto:
         one: 'produto'
         other: 'produtos'
+        extenso: 'Lista de produtos'
     attributes:
       produto:
         editar: 'editar produto'

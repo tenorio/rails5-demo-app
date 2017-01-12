@@ -5,6 +5,34 @@
 %p
   %strong= t('sobrenome', scope: [:activerecord, :attributes, :cliente])
   = @cliente.sobrenome
+%p
+  %strong= t('sexo', scope: [:activerecord, :attributes, :cliente])
+  = @cliente.sexo
+%p
+  %strong= t('data_nascimento', scope: [:activerecord, :attributes, :cliente])
+  = l @cliente.data_nascimento, format: :long
+%p
+  %strong= t('endereco', scope: [:activerecord, :attributes, :cliente])
+  = @cliente.endereco
+%p
+  %strong= t('cep', scope: [:activerecord, :attributes, :cliente])
+  = @cliente.cep
+%p
+  %strong= t('email', scope: [:activerecord, :attributes, :cliente])
+  = @cliente.email
+%p
+  %strong= t('uf', scope: [:activerecord, :attributes, :cliente])
+  = @cliente.uf
+%p
+  %strong= t('cidade', scope: [:activerecord, :attributes, :cliente])
+  = @cliente.cidade
+%p
+  %strong= t('pais', scope: [:activerecord, :attributes, :cliente])
+  = @cliente.pais
+%p
+  %strong= t('newsletter', scope: [:activerecord, :attributes, :cliente])
+  = @cliente.newsletter
+
 = link_to t('editar'), edit_cliente_path(@cliente)
 |
 = link_to t('voltar'), clientes_path

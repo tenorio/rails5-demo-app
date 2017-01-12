@@ -4,4 +4,6 @@ en:
   excluir: 'Destroy'
   editar: 'Edit'
   exibir: 'Show'
+  sexoF: 'Female'
+  sexoM: 'Male'
   voltar: 'Back'

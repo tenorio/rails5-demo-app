@@ -12,6 +12,31 @@
     = f.label :sobrenome
     = f.text_field :sobrenome
   .field
+    = f.label :sexo
+    = f.select :sexo, options_for_select(get_sex)
+  .field
+    = f.label :data_nascimento
+    = f.date_field :data_nascimento
+  .field
     = f.label :endereco
+    = f.text_field :endereco
+  .field
+    = f.label :cep
+    = f.text_field :cep
+  .field
+    = f.label :email
+    = f.email_field :email
+  .field
+    = f.label :uf
+    = f.select :uf, options_for_select((I18n.locale == :'pt-BR' ? br_states : us_states), cliente.uf)
+  .field
+    = f.label :cidade
+    = f.text_field :cidade
+  .field
+    = f.label :pais
+    = f.text_field :pais
+  .field
+    = f.label :newsletter
+    = f.check_box :newsletter
   .actions
     = f.submit

@@ -3,6 +3,9 @@
   %strong= t('nome', scope: [:activerecord, :attributes, :produto])
   = @produto.nome
 %p
+  %strong= t('tipo', scope: [:activerecord, :models, :tipo])
+  = @produto.tipo.nome
+%p
   %strong= t('descricao', scope: [:activerecord, :attributes, :produto])
   = @produto.descricao
 %p
