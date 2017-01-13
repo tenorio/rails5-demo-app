@@ -10,15 +10,24 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
 
   %body
-    -#%header{ :class => 'w3-container' }
-    -#  = yield(:header)
+    %header{ :class => 'w3-container w3-right' }
+      - flash.each do |name, msg|
+        = content_tag :div, msg, id: "flash_#{name}"
+      - if current_user
+        = current_user.email
+        = link_to t('auth.logout'), logout_path
+      - else
+        = link_to t('auth.signup'), signup_path
+        |
+        = link_to t('auth.login'), login_path
     %div{ :class => 'w3-container' }
-      = form_tag('/', method: :get) do
-        .w3-right
-          = select_tag 'locale',
-          options_for_select(LANGUAGES, I18n.locale.to_s),
-          onchange: 'this.form.submit()'
       = yield
-    -#%footer{ :class => 'w3-container' }
-    -#  %p= "#{current_year} - Rails 5 demo app"
+    %footer{ :class => 'w3-container' }
+      %p
+        = "#{current_year} - Rails 5 demo app"
+        = form_tag('/', method: :get) do
+          .w3-right
+            = select_tag 'locale',
+            options_for_select(LANGUAGES, I18n.locale.to_s),
+            onchange: 'this.form.submit()'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'

@@ -1,4 +1,5 @@
 class ProdutosController < ApplicationController
+  before_action :authorize
   before_action :set_produto, only: [:show, :edit, :update, :destroy]
   before_action :get_tipos, only: [:new, :edit, :create]
 

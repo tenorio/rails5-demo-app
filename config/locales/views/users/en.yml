@@ -1,0 +1,29 @@
+en:
+  activerecord:
+    models:
+      user:
+        one: 'user'
+        other: 'users'
+        extenso: 'Registered users'
+    attributes:
+      user:
+        editar: 'edit user'
+        novo: 'new user'
+        email: 'e-mail'
+  auth:
+    login: 'Log in'
+    loggedin: 'Hello, you are logged in'
+    logfail: 'E-mail or password is invalid'
+    logout: 'Log out'
+    loggedout: 'You have been successfully logged off. Goodbye.'
+    notauth: 'Not authorized'
+    signup: 'Sign Up'
+    signedin: 'Thank you for signing up!'
+  actions:
+    create:
+      notice: 'User was successfully created'
+    update:
+      notice: 'User was successfully updated'
+    destroy:
+      alert: 'User could not be destroyed'
+      notice: 'User was successfully destroyed'

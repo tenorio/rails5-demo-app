@@ -1,0 +1,29 @@
+pt-BR:
+  activerecord:
+    models:
+      user:
+        one: 'usuário'
+        other: 'usuários'
+        extenso: 'Usuários registrados'
+    attributes:
+      user:
+        editar: 'editar usuário'
+        novo: 'novo usuário'
+        email: 'e-mail'
+  auth:
+    login: 'Iniciar sessão'
+    loggedin: 'Olá, você foi autenticado com sucesso'
+    logfail: 'E-mail ou senha inválidos'
+    logout: 'Sair'
+    loggedout: 'Sessão encerrada. Até logo'
+    notauth: 'Acesso não autorizado'
+    signup: 'Cadastrar-se'
+    signedin: 'Obrigado por cadastrar-se!'
+  actions:
+    create:
+      notice: 'Usuário criado com sucesso'
+    update:
+      notice: 'Usuário atualizado com sucesso'
+    destroy:
+      alert: 'Usuário não pôde ser excluído'
+      notice: 'Usuário foi excluído com sucesso'
