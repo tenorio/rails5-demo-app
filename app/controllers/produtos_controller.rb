@@ -75,6 +75,6 @@ class ProdutosController < ApplicationController
     end
 
     def get_tipos
-      @tipos = Tipo.all.order(:nome)
+      @tipos = Tipo.all_ordered_by_nome
     end
 end
