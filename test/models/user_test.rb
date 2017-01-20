@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  test 'User must enter a password' do
+  test 'User password cant be empty' do
     @user = User.new
 
     assert @user.invalid?
@@ -17,5 +17,14 @@ class UserTest < ActiveSupport::TestCase
 
     assert @user2.invalid?
     assert 'está em uso', @user2.errors[:email]
+  end
+
+  test 'should not be valid when a password is less than 6 characters' do
+    @user = User.new(email: 'foo@internet.com', password: '12345', password_confirmation: '12345')
+
+    assert @user.invalid?
+
+    assert @user.errors[:password].any?
+    assert 'é muito curto (mínimo: 6 caracteres)', @user.errors[:password]
   end
 end
