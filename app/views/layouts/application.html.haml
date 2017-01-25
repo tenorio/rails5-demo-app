@@ -2,7 +2,7 @@
 %html{ :lang => 'pt-BR' }
   %head
     %meta{ :charset => 'utf-8' }
-    %title Rails5demo
+    %title Rails5 demo app
     %meta{ :name => 'viewport', :content => 'width=device-width, initial-scale=1' }
     %meta{ :name => 'description', :content => 'A Rails 5 demo app :)' }
     %meta{ :author => 'Marcelo' }
@@ -10,24 +10,32 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
 
   %body
-    %header{ :class => 'w3-container w3-right' }
-      - flash.each do |name, msg|
-        = content_tag :div, msg, id: "flash_#{name}"
-      - if current_user
-        = current_user.email
-        = link_to t('auth.logout'), logout_path
-      - else
-        = link_to t('auth.signup'), signup_path
-        |
-        = link_to t('auth.login'), login_path
-    %div{ :class => 'w3-container' }
+    %header
+      #container
+        -#- flash.each do |name, msg|
+        -#  = content_tag :div, msg, id: "flash_#{name}"
+        %nav
+          .w3-top
+            %ul{ :class => 'w3-navbar w3-border w3-theme-l1' }
+              %li= link_to 'Home', root_path
+              - if current_user
+                %li{ :class => 'w3-right'}= link_to t('auth.logout'), logout_path
+                %li{ :class => 'w3-right w3-navitem'}= current_user.email
+                %li= link_to t('extenso', scope: [:activerecord, :models, :cliente]), clientes_path
+                %li{ :class => 'w3-dropdown-hover'}
+                  =link_to t('extenso', scope: [:activerecord, :models, :produto]), produtos_path
+                  .w3-dropdown-content.w3-white.w3-card-4
+                    = link_to t('extenso', scope: [:activerecord, :models, :tipo]), tipos_path
+              - else
+                %li{ :class => 'w3-right w3-margin-right'}= link_to t('auth.signup'), signup_path
+                %li{ :class => 'w3-right' }= link_to t('auth.login'), login_path, { :class => 'w3-hover-theme' }
+
+    %div{ :class => 'w3-container w3-padding-32' }
       = yield
-    %footer{ :class => 'w3-container' }
-      %p
-        = "#{current_year} - Rails 5 demo app"
-        = form_tag('/', method: :get) do
-          .w3-right
-            = select_tag 'locale',
-            options_for_select(LANGUAGES, I18n.locale.to_s),
-            onchange: 'this.form.submit()'
+    %footer{ :class => 'w3-container w3-theme-l1 w3-padding-16' }
+      %h6= 'Rails 5 demo app'
+      = form_tag('/', method: :get) do
+        = select_tag 'locale',
+        options_for_select(LANGUAGES, I18n.locale.to_s),
+        onchange: 'this.form.submit()'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'

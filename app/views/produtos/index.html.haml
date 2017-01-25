@@ -1,6 +1,6 @@
 %p#notice= notice
 %h1= t('other', scope: [:activerecord, :models, :produto])
-%table
+%table.w3-table-all
   %thead
     %tr
       %th= t('nome', scope: [:activerecord, :attributes, :produto])
@@ -15,7 +15,7 @@
         %td= produto.nome
         %td= produto.tipo.nome
         %td= truncate(produto.descricao)
-        %td{:style => 'text-align: right'}= number_to_currency produto.valor
+        %td= number_to_currency produto.valor
         %td= produto.estoque
         %td= link_to t('exibir'), produto
         %td= link_to t('editar'), edit_produto_path(produto)

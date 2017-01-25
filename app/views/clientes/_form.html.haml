@@ -1,4 +1,4 @@
-= form_for(cliente) do |f|
+= form_for(cliente, html: { class: 'w3-container', style: 'width: 50%' }) do |f|
   - if cliente.errors.any?
     #error_explanation
       %h2= t('record_invalid', scope: [:activerecord, :errors, :messages], errors: nil)
@@ -6,37 +6,49 @@
         - cliente.errors.full_messages.each do |message|
           %li= message
   .field
-    = f.label :nome
-    = f.text_field :nome
+    = f.label :nome, class: 'w3-label w3-text-theme'
+    = f.text_field :nome, class: 'w3-input w3-border w3-padding-4 w3-animate-input', autofocus: 'autofocus'
+  %br
   .field
-    = f.label :sobrenome
-    = f.text_field :sobrenome
+    = f.label :sobrenome, class: 'w3-label w3-text-theme'
+    = f.text_field :sobrenome, class: 'w3-input w3-border w3-padding-4'
+  %br
   .field
-    = f.label :sexo
-    = f.select :sexo, options_for_select(get_sex)
+    = f.label :sexo, class: 'w3-label w3-text-theme'
+    = f.select(:sexo, options_for_select(get_sex), {}, {:class => 'w3-input w3-border w3-padding-4'})
+  %br
   .field
-    = f.label :data_nascimento
-    = f.date_field :data_nascimento
+    = f.label :data_nascimento, class: 'w3-label w3-text-theme'
+    = f.date_field :data_nascimento, class: 'w3-input w3-border w3-padding-4'
+  %br
   .field
-    = f.label :endereco
-    = f.text_field :endereco
+    = f.label :endereco, class: 'w3-label w3-text-theme'
+    = f.text_field :endereco, class: 'w3-input w3-border w3-padding-4'
+  %br
   .field
-    = f.label :cep
-    = f.text_field :cep
+    = f.label :cep, class: 'w3-label w3-text-theme'
+    = f.text_field :cep, class: 'w3-input w3-border w3-padding-4'
+  %br
   .field
-    = f.label :email
-    = f.email_field :email
+    = f.label :email, class: 'w3-label w3-text-theme'
+    = f.email_field :email, class: 'w3-input w3-border w3-padding-4'
+  %br
   .field
-    = f.label :uf
-    = f.select :uf, options_for_select((I18n.locale == :'pt-BR' ? br_states : us_states), cliente.uf)
+    = f.label :uf, class: 'w3-label w3-text-theme'
+    = f.select(:uf, options_for_select((I18n.locale == :'pt-BR' ? br_states : us_states), cliente.uf),
+                    {}, {:class => 'w3-input w3-border w3-padding-4'})
+  %br
   .field
-    = f.label :cidade
-    = f.text_field :cidade
+    = f.label :cidade, class: 'w3-label w3-text-theme'
+    = f.text_field :cidade, class: 'w3-input w3-border w3-padding-4'
+  %br
   .field
-    = f.label :pais
-    = f.text_field :pais
+    = f.label :pais, class: 'w3-label w3-text-theme'
+    = f.text_field :pais, class: 'w3-input w3-border w3-padding-4'
+  %br
   .field
-    = f.label :newsletter
-    = f.check_box :newsletter
+    = f.check_box :newsletter, class: 'w3-border w3-padding-4 w3-check'
+    = f.label :newsletter, class: 'w3-label w3-text-theme'
+  %br
   .actions
     = f.submit
