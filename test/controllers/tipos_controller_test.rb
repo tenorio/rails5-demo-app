@@ -2,6 +2,8 @@ require 'test_helper'
 
 class TiposControllerTest < ActionDispatch::IntegrationTest
   setup do
+    autenticar
+
     @tipo = tipos(:alimentos)
     @tipo_params_create = { nome: @tipo.nome, descricao: @tipo.descricao }
 

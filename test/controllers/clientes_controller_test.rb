@@ -20,7 +20,7 @@ class ClientesControllerTest < ActionDispatch::IntegrationTest
   end
 
   teardown do
-    get logout_path
+    get logout_url
   end
 
   test 'should get index' do
@@ -62,10 +62,5 @@ class ClientesControllerTest < ActionDispatch::IntegrationTest
     end
 
     assert_redirected_to clientes_url
-  end
-
-  def autenticar
-    get login_path
-    post sessions_path, params: { session: { email: 'linus@linux.com', password: '76a5%*&$#$ASD' } }
   end
 end

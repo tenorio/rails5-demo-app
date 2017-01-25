@@ -2,6 +2,8 @@ require 'test_helper'
 
 class ProdutosControllerTest < ActionDispatch::IntegrationTest
   setup do
+    autenticar
+
     @produto = produtos(:one)
     @produto_params_create = { nome: @produto.nome, descricao: @produto.descricao, valor: @produto.valor,
                                estoque: @produto.estoque, tipo_id: tipos(:pecas).id }
