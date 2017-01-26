@@ -1,4 +1,5 @@
-%p#notice= notice
+- if notice.present?
+  %p#notice.w3-panel.w3-green.w3-padding.w3-card-8= notice
 %h1= t('other', scope: [:activerecord, :models, :cliente])
 %table.w3-table-all
   %thead
@@ -22,4 +23,3 @@
         %td= link_to t('excluir'), cliente, method: :delete, data: { confirm: t('confirmar') }
 %br/
 = link_to t('novo', scope: [:activerecord, :attributes, :cliente]), new_cliente_path
-= link_to t('voltar'), root_path

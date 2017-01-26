@@ -1,3 +1,14 @@
-%h1= t('activerecord.attributes.user.novo')
+.w3-container
+  - if @user.errors.any?
+    #error_explanation.w3-panel.w3-red.w3-card-8.w3-round
+      - if @user.errors.count == 1
+        %h4= t('errors.template.header.one', model: t('activerecord.models.user.one'))
+      - else
+        %h4= t('errors.template.header.other', model: t('activerecord.models.user.one'),
+        count: @user.errors.count)
+      %h5= t('errors.template.body')
+      %ul
+        - @user.errors.full_messages.each do |message|
+          %li= message
+  %h2= t('activerecord.attributes.user.novo')
 = render 'form', user: @user
--#= link_to t('voltar'), user_path

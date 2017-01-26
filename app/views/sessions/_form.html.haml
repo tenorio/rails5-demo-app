@@ -1,8 +1,10 @@
-= form_tag sessions_path do
+= form_tag(sessions_path, {class: 'w3-container', style: 'width: 50%'}) do
   .field
-    = label_tag :email
-    = text_field_tag :email, params[:email]
+    = label_tag :email, nil, class: 'w3-label w3-text-theme'
+    = text_field_tag :email, params[:email], class: 'w3-input w3-border w3-padding-4 w3-animate-input', autofocus: 'autofocus'
+  %br
   .field
-    = label_tag :password
-    = password_field_tag :password
+    = label_tag :password, nil, class: 'w3-label w3-text-theme'
+    = password_field_tag :password, nil, class: 'w3-input w3-border w3-padding-4 w3-animate-input'
+  %br
   .actions= submit_tag t('auth.login')

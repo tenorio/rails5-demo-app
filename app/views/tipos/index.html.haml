@@ -1,6 +1,7 @@
-%p#notice= notice
+- if notice.present?
+  %p#notice.w3-panel.w3-green.w3-padding.w3-card-8= notice
 %h1= t('other', scope: [:activerecord, :models, :tipo])
-%table
+%table.w3-table-all
   %thead
     %tr
       %th= t('nome', scope: [:activerecord, :attributes, :tipo])
@@ -10,10 +11,9 @@
     - @tipos.each do |t|
       %tr
         %td= t.nome
-        %td= truncate(t.descricao)
+        %td= truncate(t.descricao, length: 50)
         %td= link_to t('exibir'), t
         %td= link_to t('editar'), edit_tipo_path(t)
         %td= link_to t('excluir'), t, method: :delete, data: { confirm: t('confirmar') }
 %br/
 = link_to t('novo', scope: [:activerecord, :attributes, :tipo]), new_tipo_path
-= link_to t('voltar'), root_path

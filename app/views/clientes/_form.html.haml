@@ -1,13 +1,7 @@
 = form_for(cliente, html: { class: 'w3-container', style: 'width: 50%' }) do |f|
-  - if cliente.errors.any?
-    #error_explanation
-      %h2= t('record_invalid', scope: [:activerecord, :errors, :messages], errors: nil)
-      %ul
-        - cliente.errors.full_messages.each do |message|
-          %li= message
   .field
     = f.label :nome, class: 'w3-label w3-text-theme'
-    = f.text_field :nome, class: 'w3-input w3-border w3-padding-4 w3-animate-input', autofocus: 'autofocus'
+    = f.text_field :nome, class: 'w3-input w3-border w3-padding-4', autofocus: 'autofocus'
   %br
   .field
     = f.label :sobrenome, class: 'w3-label w3-text-theme'
@@ -52,3 +46,5 @@
   %br
   .actions
     = f.submit
+    = t('ou')
+    = link_to t('voltar'), clientes_path

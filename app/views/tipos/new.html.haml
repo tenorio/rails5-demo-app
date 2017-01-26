@@ -1,3 +1,14 @@
-%h1= t('novo', scope: [:activerecord, :attributes, :tipo])
+.w3-container
+  - if @tipo.errors.any?
+    #error_explanation.w3-panel.w3-red.w3-card-8.w3-round
+      - if @tipo.errors.count == 1
+        %h4= t('errors.template.header.one', model: t('activerecord.models.tipo.one'))
+      - else
+        %h4= t('errors.template.header.other', model: t('activerecord.models.tipo.one'),
+        count: @tipo.errors.count)
+      %h5= t('errors.template.body')
+      %ul
+        - @tipo.errors.full_messages.each do |message|
+          %li= message
+  %h2= t('novo', scope: [:activerecord, :attributes, :tipo])
 = render 'form', tipo: @tipo
-= link_to t('voltar'), tipos_path

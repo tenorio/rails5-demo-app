@@ -3,9 +3,12 @@ pt-BR:
   activerecord:
     models:
       cliente:
+        created: 'Cliente foi criado com sucesso.'
+        destroyed: 'Cliente foi excluído com sucesso.'
+        extenso: 'Lista de clientes'
         one: 'cliente'
         other: 'clientes'
-        extenso: 'Lista de clientes'
+        updated: 'Cliente foi atualizado com sucesso.'
     attributes:
       cliente:
         editar: 'editar cliente'

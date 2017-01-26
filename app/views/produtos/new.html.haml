@@ -1,3 +1,14 @@
-%h1= t('novo', scope: [:activerecord, :attributes, :produto])
+.w3-container
+  - if @produto.errors.any?
+    #error_explanation.w3-panel.w3-red.w3-card-8.w3-round
+      - if @produto.errors.count == 1
+        %h4= t('errors.template.header.one', model: t('activerecord.models.produto.one'))
+      - else
+        %h4= t('errors.template.header.other', model: t('activerecord.models.produto.one'),
+        count: @produto.errors.count)
+      %h5= t('errors.template.body')
+      %ul
+        - @produto.errors.full_messages.each do |message|
+          %li= message
+  %h2= t('novo', scope: [:activerecord, :attributes, :produto])
 = render 'form', produto: @produto
-= link_to t('voltar'), produtos_path

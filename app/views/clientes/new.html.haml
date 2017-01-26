@@ -1,4 +1,14 @@
 .w3-container
+  - if @cliente.errors.any?
+    #error_explanation.w3-panel.w3-red.w3-card-8.w3-round
+      - if @cliente.errors.count == 1
+        %h4= t('errors.template.header.one', model: t('activerecord.models.cliente.one'))
+      - else
+        %h4= t('errors.template.header.other', model: t('activerecord.models.cliente.one'),
+        count: @cliente.errors.count)
+      %h5= t('errors.template.body')
+      %ul
+        - @cliente.errors.full_messages.each do |message|
+          %li= message
   %h2= t('novo', scope: [:activerecord, :attributes, :cliente])
 = render 'form', cliente: @cliente
-= link_to t('voltar'), clientes_path

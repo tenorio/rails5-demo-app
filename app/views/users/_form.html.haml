@@ -1,18 +1,16 @@
-= form_for(user) do |f|
-  - if user.errors.any?
-    #error_explanation
-      %h2= t('activerecord.errors.messages.record_invalid')
-      %ul
-        - user.errors.full_messages.each do |message|
-          %li= message
+= form_for(user, html: {class: 'w3-container', style: 'width: 50%'}) do |f|
+
   .field
-    = f.label :email
-    = f.text_field :email
+    = f.label :email, class: 'w3-label w3-text-theme'
+    = f.text_field :email, class: 'w3-input w3-border w3-padding-4 w3-animate-input', autofocus: 'autofocus'
+  %br
   .field
-    = f.label :password
-    = f.password_field :password
+    = f.label :password, class: 'w3-label w3-text-theme'
+    = f.password_field :password, class: 'w3-input w3-border w3-padding-4 w3-animate-input', autofocus: 'autofocus'
+  %br
   .field
-    = f.label :password_confirmation
-    = f.password_field :password_confirmation
+    = f.label :password_confirmation, class: 'w3-label w3-text-theme'
+    = f.password_field :password_confirmation, class: 'w3-input w3-border w3-padding-4 w3-animate-input', autofocus: 'autofocus'
+  %br
   .actions
     = f.submit

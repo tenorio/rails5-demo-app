@@ -1,5 +1,2 @@
 %h1= t('editar', scope: [:activerecord, :attributes, :produto])
 = render 'form', produto: @produto
-= link_to t('exibir'), @produto
-|
-= link_to t('voltar'), produtos_path

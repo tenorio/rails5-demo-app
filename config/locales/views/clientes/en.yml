@@ -23,9 +23,12 @@ en:
   activerecord:
     models:
       cliente:
+        created: 'Cliente was successfully created.'
+        destroyed: 'Cliente was successfully destroyed.'
+        extenso: 'List of clients'
         one: 'client'
         other: 'clients'
-        extenso: 'List of clients'
+        updated: 'Cliente was successfully updated.'
     attributes:
       cliente:
         editar: 'edit client'

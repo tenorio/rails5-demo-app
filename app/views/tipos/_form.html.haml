@@ -1,15 +1,13 @@
-= form_for(tipo) do |f|
-  - if tipo.errors.any?
-    #error_explanation
-      %h2= t('record_invalid', scope: [:activerecord, :errors, :messages], errors: nil)
-      %ul
-        - tipo.errors.full_messages.each do |message|
-          %li= message
+= form_for(tipo, html: { class: 'w3-container', style: 'width: 50%' }) do |f|
   .field
-    = f.label :nome
-    = f.text_field :nome
+    = f.label :nome, class: 'w3-label w3-text-theme'
+    = f.text_field :nome, class: 'w3-input w3-border w3-padding-4', autofocus: 'autofocus'
+  %br
   .field
-    = f.label :descricao
-    = f.text_area :descricao
+    = f.label :descricao, class: 'w3-label w3-text-theme'
+    = f.text_area :descricao, class: 'w3-input w3-border w3-padding-4', cols:20, rows: 10
+  %br
   .actions
     = f.submit
+    = t('ou')
+    = link_to t('voltar'), tipos_path
