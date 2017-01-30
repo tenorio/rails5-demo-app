@@ -8,8 +8,10 @@ en:
     attributes:
       user:
         editar: 'edit user'
-        novo: 'new user'
         email: 'e-mail'
+        novo: 'new user'
+        password: 'password'
+        password_confirmation: 'password confirmation'
   auth:
     login: 'Log in'
     loggedin: 'Hello, you are logged in'

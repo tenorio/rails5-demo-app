@@ -24,8 +24,11 @@
                   =link_to t('extenso', scope: [:activerecord, :models, :produto]), produtos_path
                   .w3-dropdown-content.w3-white.w3-card-4
                     = link_to t('extenso', scope: [:activerecord, :models, :tipo]), tipos_path
+                %li{ :class => 'w3-dropdown-hover' }
+                  = link_to t('activerecord.models.user.extenso'), 'javascript:;'
+                  .w3-dropdown-content.w3-white.w3-card-4
+                    = link_to t('activerecord.attributes.user.novo'), new_user_path
               - else
-                %li{ :class => 'w3-right w3-margin-right'}= link_to t('auth.signup'), signup_path
                 %li{ :class => 'w3-right' }= link_to t('auth.login'), login_path, { :class => 'w3-hover-theme' }
     %div{ :class => 'w3-container w3-padding-32' }
       = yield
