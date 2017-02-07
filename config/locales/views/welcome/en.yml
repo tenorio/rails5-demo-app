@@ -1,0 +1,10 @@
+---
+en:
+  main: 'Welcome! This is the Rails 5 sample app'
+  features:
+    main: 'This app features:'
+    i18n: 'English and Portuguese I18n'
+    auth: 'Custom authentication made with method "has_secure_password"'
+    validations: 'Multiple data validations'
+    haml: 'HTML made with "HAML" gem'
+    w3css: 'Layout made with CSS framework'

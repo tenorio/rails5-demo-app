@@ -1,18 +1,15 @@
 - if notice.present?
   %p#notice.w3-panel.w3-green.w3-padding.w3-card-8= notice
 %h1.w3-xxxlarge
-  %b Welcome to the Rails 5 sample app
-%h6
-  This is the home page for the
-  %span.w3-tag Ruby on Rails sample application
+  %b= t('main')
 %br
-%h6 This app features:
+%h6= t('features.main')
 #features
   %ul
-    %li I18n
-    %li Autenticação com 'has_secure_password'
-    %li Validações diversas para dados inseridos
-    %li Geração de HTML utilizando gem "HAML"
+    %li= t('features.i18n')
+    %li= t('features.auth')
+    %li= t('features.validations')
+    %li= t('features.haml')
     %li
-      Layout criado com o framework CSS
+      = t('features.w3css')
       = link_to 'W3.css', 'http://www.w3schools.com/w3css', target: '_blank'

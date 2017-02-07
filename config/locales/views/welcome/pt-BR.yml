@@ -1,0 +1,10 @@
+---
+pt-BR:
+  main: 'Bem-vindo(a)! Esta é a app demo Rails 5'
+  features:
+    main: 'Esta app possui:'
+    i18n: 'I18n em português e inglês'
+    auth: 'Autenticação própria utilizando método "has_secure_password"'
+    validations: 'Validações diversas para dados inseridos'
+    haml: 'Geração de HTML utilizando gem "HAML"'
+    w3css: 'Layout criado com o framework CSS'
