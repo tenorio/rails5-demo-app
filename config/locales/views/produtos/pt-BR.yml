@@ -15,3 +15,5 @@ pt-BR:
         valor: 'valor'
         estoque: 'estoque'
         tipo: 'tipo'
+        image: 'imagem'
+        no-image: 'imagem não encontrada'

@@ -15,3 +15,5 @@ en:
         valor: 'price'
         estoque: 'stock'
         tipo: 'type'
+        image: 'image'
+        no-image: 'no image found'

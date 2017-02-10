@@ -8,3 +8,4 @@ pt-BR:
     validations: 'Validações diversas para dados inseridos'
     haml: 'Geração de HTML utilizando gem "HAML"'
     w3css: 'Layout criado com o framework CSS'
+    upload-imgs: 'Upload de imagens utilizando gem "Carrierwave"'

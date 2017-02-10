@@ -22,3 +22,6 @@
 
 # Rubymine files
 .idea/*
+
+# Ignore upload images
+/public/uploads/*

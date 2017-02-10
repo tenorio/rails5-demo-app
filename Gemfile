@@ -69,3 +69,9 @@ gem 'haml', '~> 4.1.0.beta.1'
 
 # I18n
 gem 'rails-i18n', '~> 5.0.0'
+
+# Upload with CarrierWave
+gem 'carrierwave', '~> 1.0'
+
+# Image treatment with rmagick
+gem 'rmagick', '~> 2.16'

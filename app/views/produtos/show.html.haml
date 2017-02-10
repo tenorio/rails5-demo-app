@@ -1,19 +1,25 @@
 %p#notice= notice
 %p
-  %strong= t('nome', scope: [:activerecord, :attributes, :produto])
+  %strong= t('activerecord.attributes.produto.nome')
   = @produto.nome
 %p
-  %strong= t('tipo', scope: [:activerecord, :models, :tipo])
+  %strong= t('activerecord.attributes.tipo.nome')
   = @produto.tipo.nome
 %p
-  %strong= t('descricao', scope: [:activerecord, :attributes, :produto])
+  %strong= t('activerecord.attributes.produto.descricao')
   = @produto.descricao
 %p
-  %strong= t('valor', scope: [:activerecord, :attributes, :produto])
+  %strong= t('activerecord.attributes.produto.valor')
   = @produto.valor
 %p
-  %strong= t('estoque', scope: [:activerecord, :attributes, :produto])
+  %strong= t('activerecord.attributes.produto.estoque')
   = @produto.estoque
+%p
+  %strong= t('activerecord.attributes.produto.image')
+  - if @produto.image?
+    = image_tag @produto.image_url
+  - else
+    = t('activerecord.attributes.produto.no-image')
 
 = link_to t('editar'), edit_produto_path(@produto)
 = t('ou')

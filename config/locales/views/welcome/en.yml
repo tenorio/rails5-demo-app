@@ -8,3 +8,4 @@ en:
     validations: 'Multiple data validations'
     haml: 'HTML made with "HAML" gem'
     w3css: 'Layout made with CSS framework'
+    upload-imgs: 'Image upload made with "Carrierwave" gem'
