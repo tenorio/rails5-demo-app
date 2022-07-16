@@ -74,4 +74,4 @@ gem 'rails-i18n', '~> 5.0.0'
 gem 'carrierwave', '~> 1.0'
 
 # Image treatment with rmagick
-gem 'rmagick', '~> 2.16'
+# gem 'rmagick', '~> 2.16'
